@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2196F3"
+    android:backgroundTint="#90A6B8"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:background="#FFEB3B"
+        android:text="DETECCIÓN DE OBJETOS CON GOOGLE ML KIT"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/darker_gray"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <TextView
+        android:id="@+id/txtresults"
+        android:layout_width="373dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="40dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view" />
+
+    <Button
+        android:id="@+id/button_camera"
+        android:layout_width="126dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:onClick="onCameraButtonClick"
+        android:text="Cámara"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtresults" />
+
+    <Button
+        android:layout_width="157dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="onScanQRButtonClick"
+        android:text="Scanner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.844"
+        app:layout_constraintStart_toEndOf="@+id/button_camera"
+        app:layout_constraintTop_toBottomOf="@+id/txtresults" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
